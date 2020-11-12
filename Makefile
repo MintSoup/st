@@ -7,7 +7,7 @@ include config.mk
 SRC = st.c x.c hb.c
 OBJ = $(SRC:.c=.o)
 
-all: options st
+all: options st 
 
 options:
 	@echo st build options:
@@ -50,9 +50,11 @@ install: st
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/st.1
 	tic -sx st.info
 	@echo Please see the README file regarding the terminfo entry of st.
+	install st-copyout /usr/bin/
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
+	rm -f /usr/bin/st-copyout
 
 .PHONY: all options clean dist install uninstall
