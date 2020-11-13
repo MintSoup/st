@@ -176,15 +176,15 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ ShiftMask,            Button4, kscrollup,      {.i = 5},		0, 		-1},
-	{ ShiftMask,            Button5, kscrolldown,    {.i = 5},		0,		-1},
+	{ ShiftMask,            Button4, kscrollup,      {.i =    5},		0, 		-1},
+	{ ShiftMask,            Button5, kscrolldown,    {.i =    5},		0,		-1},
 	{ Mod1Mask,             Button4, zoom,           {.f =  1.5},		0, 		-1},
 	{ Mod1Mask,             Button5, zoom,           {.f = -1.5},		0,		-1},
-	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 1},		0, 		-1},
-	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1},		0,		-1},
-	{ XK_ANY_MOD,           Button3, selpaste,       {.i = 0},      1 },
+	{ XK_ANY_MOD,           Button4, kscrollup,      {.i =    1},		0, 		-1},
+	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i =    1},		0,		-1},
+	{ XK_ANY_MOD,           Button3, selpaste,       {.i =    0},		1		  },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
-	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
+	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} }
 	//{ ShiftMask,          Button4, ttysend,        {.s = "\033[5;2~"} },
 	//{ ShiftMask,          Button5, ttysend,        {.s = "\033[6;2~"} },
 	
@@ -202,8 +202,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,         		 XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,           		 XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,          		 XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,             		 XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,             		 XK_Next,        zoom,           {.f = -1} },
+	{ TERMMOD,             		 XK_k,           zoom,           {.f = +2} },
+	{ TERMMOD,             		 XK_j,           zoom,           {.f = -2} },
 	{ ControlMask | ShiftMask,   XK_C,           clipcopy,       {.i =  0} },
 	{ ControlMask | ShiftMask,   XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,             		 XK_Y,           selpaste,       {.i =  0} },

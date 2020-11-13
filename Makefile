@@ -50,11 +50,11 @@ install: st
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/st.1
 	tic -sx st.info
 	@echo Please see the README file regarding the terminfo entry of st.
-	install st-copyout /usr/bin/
+	install st-copyout /usr/local/bin/
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
-	rm -f /usr/bin/st-copyout
+	rm -f /usr/local/bin/st-copyout
 
 .PHONY: all options clean dist install uninstall
